@@ -1,0 +1,324 @@
+@font-face {
+    font-family: "Geometric-Bold";
+    src: url("../typo/geometric-231-bt-bold.ttf");
+}
+
+@font-face {
+    font-family: "Geometric";
+    src: url("../typo/geometric_231_bt.ttf");
+}
+
+body{
+  margin: 0px;
+  background-color: #F8EFF3;
+  font-family: "Geometric";
+}
+
+.actuel{
+  color: lightpink;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow: auto;
+    scroll-snap-type: block;
+
+}
+
+
+
+/*----------------------------------------HEADER------------------------------------------*/
+header{
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  color: white;
+/*  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;*/
+}
+
+h2{
+  font-size: 15vh;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  font-family: "Geometric-Bold";
+  position: absolute;
+  color: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+
+}
+
+header>nav{
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  font-size: 4vh;
+/*  text-align: right;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+/*  margin-right: 100px;*/
+}
+
+header>nav>ul>li{
+  list-style: none;
+  display: inline;
+  margin-right: 5vh;
+  font-family: "Geometric";
+}
+
+header>nav>ul>li>a{
+  text-decoration: none;
+  font-size: 4vh;
+  color: white;
+/*  margin-right: 5vh;*/
+}
+
+nav>ul>li>a:hover{
+  transition-property: font-weight;
+  transition-duration: 0.2s;
+  font-weight: bold;
+}
+
+header>nav>h1>a{
+  text-decoration: none;
+  color: white;
+}
+
+h1{
+  font-size: 7vh;
+  font-family: "Geometric-Bold";
+  margin-left: 3.5vh;
+/*  display: inline;*/
+  margin-block-start: 0.15em;
+  margin-block-end: 0em;
+}
+
+
+#testVideo {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  min-height: 100vh;
+  max-height:100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#resume{
+  background-color: #F8EFF3;
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Timeline Container */
+.timeline {
+  background-color: rgba(247,247,247,1);
+  margin: 0px auto;
+  padding-top: 0.7vh;
+    display: flex;
+  justify-content: center;
+}
+
+/* Card container */
+.card {
+  position: relative;
+  max-width: 130vh;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid #717B95;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  /*background: #333;*/
+  color: gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Title of the card */
+.title {
+  color: #717B95;
+  position: relative;
+  font-size: 5.5vh;
+  margin-block-start: 0vh;
+    margin-block-end: 8vh;
+  text-transform: uppercase;
+}
+
+#titre02{
+  margin-block-start: 15vh;
+}
+
+.biblio{
+  font-size: 3.2vh;
+}
+
+.lienBiblio{
+  font-style: italic;
+}
+
+a{
+  color: lightpink;
+}
+
+.auteurBiblio{
+  font-family: "Geometric-Bold";
+}
+
+#droite01{
+  align-self: flex-end;
+}
+
+#droite02{
+  align-self: flex-end;
+}
+
+#droite03{
+  align-self: flex-end;
+}
+
+
+/* Timeline dot  */
+.title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid lightpink;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even) > .info > .title {
+  text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .title::before {
+  left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .title::before {
+  right: -45px;
+}
+
+
+
+
+
+
+
+
+/*----------------------------------------FOOTER------------------------------------------*/
+footer{
+  color: white;
+  background-color: #717B95;
+  text-align: center;
+  font-family: "Geometric";
+  font-size: 3vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+footer>span{
+  font-size: 3.2vh;
+}
+
